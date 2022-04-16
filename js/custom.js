@@ -33,10 +33,58 @@ $(".owl-carousel").owlCarousel({
 });
 
 /** google_map js **/
+
+
+
+
+
+
 function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(22.56105263009042, 88.41566638286007),
-        zoom: 18,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    const loc = { lat: 22.56105263009042, lng:88.41566638286007 };    
+    const myMap= new google.maps.Map(document.getElementById("googleMap"),{center:loc,zoom: 15});  
+    const myMarker = new google.maps.Marker({
+            position: loc,
+            map: myMap,
+          });
+    var map = new google.maps.Map(myMap);
 }
+
+
+// $("#btnSubmit").click(function () {
+//     Email.send({
+//       Host: "smtp.gmail.com",
+//       //Username: "sender@email_address.com",
+//       //Password: "Enter your password",
+//       To: 'bazaar4283@gmail.com',
+//       From: $("#email"),
+//       Subject: "Customer Query",
+//       Body: `<p> <span>Full Name: ${$("#firstName")} ${$("#lastname")} </span><br/>
+//                  <span> Phone: ${$("#phone")} </span> <br/> 
+//                  <span> Email : ${$("#email")}<span><br/> 
+//                  <span> Message: ${$("#message")}`,
+//     //   Attachments: [
+//     //     {
+//     //       name: "File_Name_with_Extension",
+//     //       path: "Full Path of the file"
+//     //     }]
+//     })
+//       .then(function (message) {
+//         alert("Your Query has been sent successfully. We will contact you soon")
+//       });
+//     });
+
+function sendEmail() {
+   
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "sujeet",
+     // Password: "Enter your password",
+      To: 'bazaar4283@gmail.com',
+      //From: "sender@email_address.com",
+      Subject: "Sending Email using javascript",
+      Body: "Well that was easy!!",
+    })
+      .then(function (message) {
+        alert("mail sent successfully")
+      });
+  }
