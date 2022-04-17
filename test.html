@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <script type="text/javascript">
+            function sendMail() {
+            var link = "mailto:me@example.com"
+             + "?cc=myCCaddress@example.com"
+             + "&subject=" + encodeURIComponent("This is my subject")
+             + "&body=" + encodeURIComponent(document.getElementById('myText').value)
+    ;
+    
+    window.location.href = link;
+}
+</script>
+    
+
+<textarea id="myText" placeholder="Lorem ipsum...">
+    
+</textarea>
+<button onclick="sendMail();">Send</button>
+    </body>
+    </html>
