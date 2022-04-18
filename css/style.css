@@ -8,7 +8,8 @@
 .Lapyfix{
   color: white;
   text-transform: uppercase;
-  text-decoration: double;
+  margin-top: 0px;
+  /* text-decoration: double; */
   font: icon;
 }
 
