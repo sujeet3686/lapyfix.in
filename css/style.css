@@ -1,3 +1,16 @@
+.digitech{
+  color:white;
+  position: relative;
+  top: 30px;
+  right: 400px;
+}
+.Lapyfix{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: double;
+  font: icon;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
